@@ -4,7 +4,6 @@ export const siteUrl = "https://marcelodev.tech";
 
 export const profile = {
   name: "Marcelo Lucas",
-  url: siteUrl,
   links: {
     email: "marcelolucasdeoliveiraa@gmail.com",
     linkedin: "https://www.linkedin.com/in/mlucasoliv/",
