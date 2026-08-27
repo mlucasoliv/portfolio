@@ -101,7 +101,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           type: "Meio período",
           location: "Maceió, AL",
           description:
-            "Desenvolvimento e manutenção de APIs e serviços backend com foco em desempenho, segurança e escalabilidade, além de modelagem e integração de bancos de dados garantindo consistência e eficiência no acesso aos dados.",
+            "Desenvolvimento da plataforma do OxeTech, construindo e mantendo APIs e serviços backend com foco em desempenho, segurança e escalabilidade, além de modelagem e integração de bancos de dados garantindo consistência e eficiência no acesso aos dados.",
           tags: ["Node.js", "PostgreSQL", "Redis", "Docker", "Backend", "APIs"],
         },
       ],
@@ -117,7 +117,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     contact: {
       title: "Contato",
-      intro: "Aberto a novos projetos e oportunidades. Vamos conversar.",
+      intro:
+        "Aberto a encomendas de projetos, freelas e novas oportunidades. Vamos conversar.",
       items: contactItems,
       form: {
         name: { label: "Nome", placeholder: "Seu nome" },
@@ -168,7 +169,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           type: "Part-time",
           location: "Maceió, Brazil",
           description:
-            "Development and maintenance of backend APIs and services focused on performance, security, and scalability, plus data modeling and database integration ensuring consistency and efficient data access.",
+            "Development of the OxeTech platform, building and maintaining backend APIs and services focused on performance, security, and scalability, plus data modeling and database integration ensuring consistency and efficient data access.",
           tags: ["Node.js", "PostgreSQL", "Redis", "Docker", "Backend", "APIs"],
         },
       ],
@@ -184,7 +185,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     contact: {
       title: "Contact",
-      intro: "Open to new projects and opportunities. Let's talk.",
+      intro:
+        "Open to project commissions, freelance work and new opportunities. Let's talk.",
       items: contactItems,
       form: {
         name: { label: "Name", placeholder: "Your name" },
