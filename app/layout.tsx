@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { dictionaries, profile, siteUrl } from "@/lib/data";
 import "./globals.css";
 
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 const title = `${profile.name} — ${dictionaries.pt.hero.role}`;
@@ -67,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning className={`${sans.variable} ${mono.variable}`}>
+    <html lang="pt-BR" suppressHydrationWarning className={mono.variable}>
       <body>
         <ThemeProvider>
           <LanguageProvider>{children}</LanguageProvider>

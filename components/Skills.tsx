@@ -13,12 +13,12 @@ export function Skills() {
         {t.skills.groups.map((s, i) => (
           <Reveal key={s.group} delay={i * 0.05}>
             <div>
-              <h3 className="mb-3 text-sm font-medium text-fg">{s.group}</h3>
-              <ul className="flex flex-wrap gap-2">
+              <h3 className="mb-3 uppercase text-fg">{s.group}</h3>
+              <ul className="flex flex-wrap gap-x-4 gap-y-1">
                 {s.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-md border border-border bg-surface/50 px-2.5 py-1 font-mono text-sm text-muted"
+                    className="uppercase text-muted"
                   >
                     {item}
                   </li>

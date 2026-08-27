@@ -12,7 +12,7 @@ export function LanguageToggle() {
     <div
       role="group"
       aria-label="Idioma / Language"
-      className="flex items-center rounded-full border border-border bg-surface/60 p-0.5 font-mono text-sm"
+      className="flex items-center gap-2"
     >
       {options.map((opt) => {
         const active = locale === opt;
@@ -22,8 +22,8 @@ export function LanguageToggle() {
             type="button"
             aria-pressed={active}
             onClick={() => setLocale(opt)}
-            className={`press rounded-full px-2 py-1 uppercase transition-colors duration-200 ease-out ${
-              active ? "bg-fg text-bg" : "text-muted hover:text-fg"
+            className={`press uppercase transition-colors duration-200 ease-out ${
+              active ? "text-fg underline decoration-current underline-offset-4" : "text-muted hover:text-fg"
             }`}
           >
             {opt}

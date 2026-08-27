@@ -17,10 +17,10 @@
   }
 
   .dark {
-    --bg: 10 10 10;
-    --surface: 23 23 23;
-    --border: 38 38 38;
-    --fg: 237 237 237;
+    --bg: 8 8 8;
+    --surface: 18 18 18;
+    --border: 32 32 32;
+    --fg: 201 201 201;
     --muted: 138 138 138;
     --accent: 163 163 163;
     --danger: 248 113 113;
@@ -34,6 +34,8 @@
   }
 
   body {
+    letter-spacing: 0.01em;
+    line-height: 1.7;
     background-color: rgb(var(--bg));
     color: rgb(var(--fg));
     -webkit-font-smoothing: antialiased;

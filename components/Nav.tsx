@@ -28,7 +28,7 @@ export function Nav() {
               <li key={l.href}>
                 <ScrollLink
                   href={l.href}
-                  className="rounded-full px-3 py-1.5 text-sm text-muted transition-colors duration-200 ease-out hover:text-fg"
+                  className="px-2 py-1 uppercase text-muted transition-colors duration-200 ease-out hover:text-fg"
                 >
                   {l.label}
                 </ScrollLink>

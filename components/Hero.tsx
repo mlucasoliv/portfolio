@@ -23,31 +23,32 @@ export function Hero() {
   return (
     <section id="top" className="pb-20 pt-28 sm:pt-36">
       <motion.div variants={container} initial="hidden" animate="show">
-        <motion.p variants={item} className="mb-5 font-mono text-sm uppercase tracking-widest text-muted">
-          {t.hero.role}
-        </motion.p>
-        <motion.h1
-          variants={item}
-          className="text-balance text-6xl font-semibold leading-[0.95] tracking-[-0.04em] sm:text-7xl"
-        >
+        {/* Sem hierarquia de tamanho: o nome se distingue pelo contraste,
+            não pela escala — como na referência. */}
+        <motion.h1 variants={item} className="uppercase text-fg">
           {profile.name}
         </motion.h1>
+        <motion.p variants={item} className="uppercase text-muted">
+          {t.hero.role}
+        </motion.p>
+
         <motion.p
           variants={item}
-          className="mt-6 max-w-[46ch] text-balance text-base leading-relaxed text-muted"
+          className="mt-7 max-w-[52ch] uppercase leading-loose text-muted"
         >
           {t.hero.tagline}
         </motion.p>
-        <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+
+        <motion.div variants={item} className="mt-7 flex flex-wrap gap-x-6 gap-y-2">
           <ScrollLink
             href="#experiencia"
-            className="press rounded-full bg-fg px-4 py-2 text-sm font-medium text-bg transition-opacity duration-200 ease-out hover:opacity-80"
+            className="uppercase text-muted underline decoration-border underline-offset-4 transition-colors duration-200 ease-out hover:text-fg hover:decoration-current"
           >
             {t.hero.ctaExperience}
           </ScrollLink>
           <ScrollLink
             href="#contato"
-            className="press rounded-full border border-border px-4 py-2 text-sm font-medium transition-colors duration-200 ease-out hover:bg-surface"
+            className="uppercase text-muted underline decoration-border underline-offset-4 transition-colors duration-200 ease-out hover:text-fg hover:decoration-current"
           >
             {t.hero.ctaContact}
           </ScrollLink>

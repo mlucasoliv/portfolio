@@ -16,7 +16,7 @@ export function ThemeToggle() {
       type="button"
       aria-label="Alternar tema"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="press grid h-9 w-9 place-items-center rounded-full border border-border bg-surface/60 text-muted transition-colors duration-200 ease-out hover:text-fg"
+      className="press grid h-7 w-7 place-items-center text-muted transition-colors duration-200 ease-out hover:text-fg"
     >
       {/* Avoid hydration mismatch: render a stable icon until mounted */}
       {mounted ? (isDark ? <SunIcon /> : <MoonIcon />) : <span className="h-4 w-4" />}

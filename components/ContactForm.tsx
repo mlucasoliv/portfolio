@@ -71,7 +71,7 @@ export function ContactForm() {
           required
           rows={4}
           placeholder={f.message.placeholder}
-          className="w-full resize-none rounded-lg border border-border bg-surface/50 px-3 py-2 text-sm text-fg outline-none transition-colors duration-200 ease-out placeholder:text-muted/70 focus:border-fg/30"
+          className="resize-none w-full border-0 border-b border-border bg-transparent px-0 py-2 text-base text-fg outline-none transition-colors duration-200 ease-out placeholder:text-muted/60 focus:border-fg/50"
         />
       </Field>
 
@@ -79,15 +79,15 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={sending}
-          className="press rounded-full bg-fg px-5 py-2.5 text-sm font-medium text-bg transition-opacity duration-200 ease-out hover:opacity-90 disabled:opacity-60"
+          className="press uppercase text-fg underline decoration-border underline-offset-4 transition-colors duration-200 ease-out hover:decoration-current disabled:opacity-50"
         >
           {sending ? f.sending : f.send}
         </button>
         {status === "success" && (
-          <span className="text-sm font-medium text-fg">{f.success}</span>
+          <span className="uppercase text-fg">{f.success}</span>
         )}
         {status === "error" && (
-          <span className="text-sm font-medium text-danger">{f.error}</span>
+          <span className="uppercase text-danger">{f.error}</span>
         )}
       </div>
     </form>
@@ -100,7 +100,7 @@ function Field({ children }: { children: React.ReactNode }) {
 
 function Label({ htmlFor, children }: { htmlFor: string; children: React.ReactNode }) {
   return (
-    <label htmlFor={htmlFor} className="block font-mono text-sm text-muted">
+    <label htmlFor={htmlFor} className="block uppercase text-muted">
       {children}
     </label>
   );
@@ -110,7 +110,7 @@ function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
       {...props}
-      className="w-full rounded-lg border border-border bg-surface/50 px-3 py-2 text-sm text-fg outline-none transition-colors duration-200 ease-out placeholder:text-muted/70 focus:border-fg/30"
+      className="w-full border-0 border-b border-border bg-transparent px-0 py-2 text-base text-fg outline-none transition-colors duration-200 ease-out placeholder:text-muted/60 focus:border-fg/50"
     />
   );
 }

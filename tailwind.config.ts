@@ -10,7 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        // A referência é monoespaçada em tudo; "sans" resolve para mono
+        // para que nenhum utilitário font-sans remanescente escape.
+        sans: ["var(--font-mono)", "ui-monospace", "monospace"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       colors: {

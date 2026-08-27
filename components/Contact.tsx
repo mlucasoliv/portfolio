@@ -27,12 +27,12 @@ export function Contact() {
                 href={item.href}
                 target={item.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between py-4 transition-colors duration-200 ease-out hover:text-accent"
+                className="group flex items-center justify-between py-3 uppercase text-muted underline decoration-border underline-offset-4 transition-colors duration-200 ease-out hover:text-fg hover:decoration-current"
               >
-                <span className="font-mono text-sm text-muted group-hover:text-accent">
+                <span className="font-mono text-base text-muted group-hover:text-accent">
                   {item.label}
                 </span>
-                <span className="flex items-center gap-2 text-sm">
+                <span className="flex items-center gap-2 text-base">
                   {item.value}
                   <svg
                     width="14"

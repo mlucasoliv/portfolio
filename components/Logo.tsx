@@ -15,19 +15,19 @@ export function Logo({ withWordmark = true }: { withWordmark?: boolean }) {
           width="30"
           height="30"
           rx="9"
-          className="fill-fg"
+          className="fill-surface stroke-border"
         />
         <path
           d="M9 22V11l7 7 7-7v11"
-          className="stroke-bg"
+          className="stroke-muted"
           strokeWidth="2.4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        <circle cx="23" cy="22" r="1.6" className="fill-accent" />
+        <circle cx="23" cy="22" r="1.6" className="fill-muted" />
       </svg>
       {withWordmark && (
-        <span className="font-mono text-sm font-medium tracking-tight">
+        <span className="uppercase text-muted">
           marcelo<span className="text-accent">.</span>
         </span>
       )}
