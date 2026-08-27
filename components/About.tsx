@@ -12,7 +12,7 @@ export function About() {
       <div className="space-y-4">
         {t.about.paragraphs.map((p, i) => (
           <Reveal key={i} delay={i * 0.05}>
-            <p className="text-balance text-lg leading-relaxed text-fg/90">{p}</p>
+            <p className="text-balance text-base leading-relaxed text-fg/90">{p}</p>
           </Reveal>
         ))}
         <Reveal delay={t.about.paragraphs.length * 0.05}>

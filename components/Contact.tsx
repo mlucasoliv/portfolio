@@ -12,7 +12,7 @@ export function Contact() {
   return (
     <Section id="contato" title={t.contact.title}>
       <Reveal>
-        <p className="text-balance text-lg leading-relaxed text-fg/90">
+        <p className="text-balance text-base leading-relaxed text-fg/90">
           {t.contact.intro}
         </p>
       </Reveal>

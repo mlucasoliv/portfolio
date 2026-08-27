@@ -12,7 +12,7 @@ export function LanguageToggle() {
     <div
       role="group"
       aria-label="Idioma / Language"
-      className="flex items-center rounded-full border border-border bg-surface/60 p-0.5 font-mono text-xs"
+      className="flex items-center rounded-full border border-border bg-surface/60 p-0.5 font-mono text-sm"
     >
       {options.map((opt) => {
         const active = locale === opt;

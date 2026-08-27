@@ -36,10 +36,10 @@ export function Experience() {
                     <span className="text-muted"> · {exp.company}</span>
                   )}
                 </h3>
-                <span className="font-mono text-xs text-muted">{exp.period}</span>
+                <span className="font-mono text-sm text-muted">{exp.period}</span>
               </div>
               {(exp.type || exp.location) && (
-                <div className="mt-2 flex flex-wrap items-center gap-2 font-mono text-xs text-muted">
+                <div className="mt-2 flex flex-wrap items-center gap-2 font-mono text-sm text-muted">
                   {exp.type && (
                     <span className="rounded-full bg-surface px-2 py-0.5 text-fg/70">
                       {exp.type}
@@ -74,7 +74,7 @@ export function Experience() {
                   {exp.tags.map((t) => (
                     <li
                       key={t}
-                      className="rounded-full border border-border px-2.5 py-0.5 font-mono text-xs text-muted"
+                      className="rounded-full border border-border px-2.5 py-0.5 font-mono text-sm text-muted"
                     >
                       {t}
                     </li>

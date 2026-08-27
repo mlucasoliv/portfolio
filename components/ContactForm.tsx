@@ -84,10 +84,10 @@ export function ContactForm() {
           {sending ? f.sending : f.send}
         </button>
         {status === "success" && (
-          <span className="text-sm text-accent">{f.success}</span>
+          <span className="text-sm font-medium text-fg">{f.success}</span>
         )}
         {status === "error" && (
-          <span className="text-sm text-accent">{f.error}</span>
+          <span className="text-sm font-medium text-danger">{f.error}</span>
         )}
       </div>
     </form>
@@ -100,7 +100,7 @@ function Field({ children }: { children: React.ReactNode }) {
 
 function Label({ htmlFor, children }: { htmlFor: string; children: React.ReactNode }) {
   return (
-    <label htmlFor={htmlFor} className="block font-mono text-xs text-muted">
+    <label htmlFor={htmlFor} className="block font-mono text-sm text-muted">
       {children}
     </label>
   );

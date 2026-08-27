@@ -20,6 +20,7 @@ const config: Config = {
         fg: "rgb(var(--fg) / <alpha-value>)",
         muted: "rgb(var(--muted) / <alpha-value>)",
         accent: "rgb(var(--accent) / <alpha-value>)",
+        danger: "rgb(var(--danger) / <alpha-value>)",
       },
       transitionTimingFunction: {
         "out-expo": "cubic-bezier(0.23, 1, 0.32, 1)",
@@ -27,7 +28,7 @@ const config: Config = {
         drawer: "cubic-bezier(0.32, 0.72, 0, 1)",
       },
       maxWidth: {
-        content: "640px",
+        content: "560px",
       },
     },
   },

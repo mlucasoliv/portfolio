@@ -18,7 +18,7 @@ export function Skills() {
                 {s.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-md border border-border bg-surface/50 px-2.5 py-1 font-mono text-xs text-muted"
+                    className="rounded-md border border-border bg-surface/50 px-2.5 py-1 font-mono text-sm text-muted"
                   >
                     {item}
                   </li>

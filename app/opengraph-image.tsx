@@ -29,7 +29,7 @@ export default function OpengraphImage() {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <circle cx="23" cy="22" r="1.6" fill="#f87171" />
+          <circle cx="23" cy="22" r="1.6" fill="#a3a3a3" />
         </svg>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -57,7 +57,7 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div style={{ width: 10, height: 10, borderRadius: 5, background: "#f87171" }} />
+          <div style={{ width: 10, height: 10, borderRadius: 5, background: "#8a8a8a" }} />
           <div style={{ fontSize: 28, color: "#737373" }}>
             {siteUrl.replace("https://", "")}
           </div>
