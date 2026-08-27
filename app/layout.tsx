@@ -1,0 +1,78 @@
+import type { Metadata } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/components/LanguageProvider";
+import { dictionaries, profile, siteUrl } from "@/lib/data";
+import "./globals.css";
+
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
+
+const title = `${profile.name} — ${dictionaries.pt.hero.role}`;
+const description = dictionaries.pt.hero.tagline;
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: `%s — ${profile.name}`,
+  },
+  description,
+  applicationName: profile.name,
+  authors: [{ name: profile.name, url: siteUrl }],
+  creator: profile.name,
+  keywords: [
+    profile.name,
+    "Software Engineer",
+    "Fullstack Developer",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "portfólio",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    alternateLocale: ["en_US"],
+    url: siteUrl,
+    siteName: profile.name,
+    title,
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="pt-BR" suppressHydrationWarning className={`${sans.variable} ${mono.variable}`}>
+      <body>
+        <ThemeProvider>
+          <LanguageProvider>{children}</LanguageProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
