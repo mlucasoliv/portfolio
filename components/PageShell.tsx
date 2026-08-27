@@ -15,9 +15,18 @@ export function PageShell({
       <header className="mb-12">
         <Link
           href="/"
-          className="uppercase text-muted underline decoration-border underline-offset-4 transition-colors duration-200 ease-out hover:text-fg hover:decoration-current"
+          className="group inline-flex items-baseline gap-2 uppercase text-muted transition-colors duration-200 ease-out hover:text-fg"
         >
-          {profile.name}
+          {/* aria-hidden: a seta é decorativa, o texto do link já diz o destino */}
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-200 ease-out group-hover:-translate-x-1"
+          >
+            ←
+          </span>
+          <span className="underline decoration-border underline-offset-4 group-hover:decoration-current">
+            {profile.name}
+          </span>
         </Link>
         <h1 className="mt-6 uppercase text-fg">{title}</h1>
       </header>
