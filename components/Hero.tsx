@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { profile } from "@/lib/data";
 import { useLanguage } from "./LanguageProvider";
+import { ScrollLink } from "./ScrollLink";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
@@ -38,18 +39,18 @@ export function Hero() {
           {t.hero.tagline}
         </motion.p>
         <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
-          <a
+          <ScrollLink
             href="#experiencia"
             className="press rounded-full bg-fg px-4 py-2 text-sm font-medium text-bg transition-opacity duration-200 ease-out hover:opacity-80"
           >
             {t.hero.ctaExperience}
-          </a>
-          <a
+          </ScrollLink>
+          <ScrollLink
             href="#contato"
             className="press rounded-full border border-border px-4 py-2 text-sm font-medium transition-colors duration-200 ease-out hover:bg-surface"
           >
             {t.hero.ctaContact}
-          </a>
+          </ScrollLink>
         </motion.div>
       </motion.div>
     </section>
