@@ -50,6 +50,7 @@ export type Dictionary = {
 };
 
 const contactItems = [
+  { label: "Email", href: `mailto:${profile.links.email}`, value: profile.links.email },
   { label: "LinkedIn", href: profile.links.linkedin, value: "/in/mlucasoliv" },
   { label: "GitHub", href: profile.links.github, value: "/mlucasoliv" },
 ];

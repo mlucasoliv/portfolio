@@ -11,25 +11,30 @@ Portfólio pessoal de **Marcelo Lucas** — Software Engineer.
 - **[Tailwind CSS](https://tailwindcss.com)** — estilização
 - **[Framer Motion](https://www.framer.com/motion/)** — animações de entrada
 - **[next-themes](https://github.com/pacocoursey/next-themes)** — tema claro/escuro
-- **[Web3Forms](https://web3forms.com)** — formulário de contato sem backend
 
 Site bilíngue (pt-BR / en) com troca de idioma no client, sem rotas duplicadas.
+Tipografia monoespaçada, escala única e paleta neutra.
 
 ## Rodando localmente
 
 ```bash
 npm install
-cp .env.example .env.local   # preencha a chave do Web3Forms
 npm run dev
 ```
 
 Abra [localhost:3000](http://localhost:3000).
 
-## Variáveis de ambiente
+## Rotas
 
-| Variável | Descrição |
+| Rota | Conteúdo |
 | --- | --- |
-| `NEXT_PUBLIC_WEB3FORMS_KEY` | Chave de acesso do [Web3Forms](https://web3forms.com), usada pelo formulário de contato. Gratuita. |
+| `/` | Nome, bio e navegação |
+| `/about` | Sobre |
+| `/experience` | Experiência |
+| `/skills` | Skills |
+| `/contact` | Email, LinkedIn e GitHub |
+
+Não há variáveis de ambiente: o site é inteiramente estático.
 
 ## Scripts
 

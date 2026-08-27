@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { SiteFooter } from "@/components/SiteFooter";
 import { dictionaries, profile, siteUrl } from "@/lib/data";
 import "./globals.css";
 
@@ -69,7 +70,16 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning className={mono.variable}>
       <body>
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            {/* m-auto (e não justify-center) centraliza sem cortar o topo
+                quando o conteúdo é mais alto que a viewport. */}
+            <div className="flex min-h-screen flex-col">
+              <div className="m-auto w-full max-w-content px-6 py-20">
+                <main>{children}</main>
+                <SiteFooter />
+              </div>
+            </div>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

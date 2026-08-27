@@ -1,6 +1,6 @@
 "use client";
 
-import { Section } from "./Section";
+import { PageShell } from "./PageShell";
 import { Reveal } from "./Reveal";
 import { useLanguage } from "./LanguageProvider";
 
@@ -8,7 +8,7 @@ export function About() {
   const { t } = useLanguage();
 
   return (
-    <Section id="sobre" title={t.about.title}>
+    <PageShell title={t.about.title}>
       <div className="space-y-4">
         {t.about.paragraphs.map((p, i) => (
           <Reveal key={i} delay={i * 0.05}>
@@ -19,6 +19,6 @@ export function About() {
           <p className="pt-2 uppercase text-muted">{t.about.location}</p>
         </Reveal>
       </div>
-    </Section>
+    </PageShell>
   );
 }

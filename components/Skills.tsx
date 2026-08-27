@@ -1,6 +1,6 @@
 "use client";
 
-import { Section } from "./Section";
+import { PageShell } from "./PageShell";
 import { Reveal } from "./Reveal";
 import { useLanguage } from "./LanguageProvider";
 
@@ -8,7 +8,7 @@ export function Skills() {
   const { t } = useLanguage();
 
   return (
-    <Section id="skills" title={t.skills.title}>
+    <PageShell title={t.skills.title}>
       <div className="grid gap-6 sm:grid-cols-2">
         {t.skills.groups.map((s, i) => (
           <Reveal key={s.group} delay={i * 0.05}>
@@ -28,6 +28,6 @@ export function Skills() {
           </Reveal>
         ))}
       </div>
-    </Section>
+    </PageShell>
   );
 }

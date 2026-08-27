@@ -1,6 +1,6 @@
 "use client";
 
-import { Section } from "./Section";
+import { PageShell } from "./PageShell";
 import { Reveal } from "./Reveal";
 import { useLanguage } from "./LanguageProvider";
 
@@ -9,7 +9,7 @@ export function Experience() {
   const experiences = t.experience.items;
 
   return (
-    <Section id="experiencia" title={t.experience.title}>
+    <PageShell title={t.experience.title}>
       <ol className="relative border-l border-border pl-6">
         {experiences.map((exp, i) => (
           <Reveal
@@ -85,6 +85,6 @@ export function Experience() {
           </Reveal>
         ))}
       </ol>
-    </Section>
+    </PageShell>
   );
 }
