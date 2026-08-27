@@ -88,7 +88,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
           company: "Kode.Lab",
           role: "Fullstack Developer",
           period: "fev 2026 — Presente",
-          type: "Meio período",
           location: "Maceió, AL",
           description:
             "Desenvolvimento de soluções de software em projetos de P&D voltados a demandas reais de empresas parceiras, em ambiente multidisciplinar e colaborativo com líderes técnicos.",
@@ -98,7 +97,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
           company: "SECTI Alagoas — Programa OxeTech",
           role: "Desenvolvedor Backend",
           period: "nov 2025 — Presente",
-          type: "Meio período",
           location: "Maceió, AL",
           description:
             "Desenvolvimento da plataforma do OxeTech, construindo e mantendo APIs e serviços backend com foco em desempenho, segurança e escalabilidade, além de modelagem e integração de bancos de dados garantindo consistência e eficiência no acesso aos dados.",
@@ -156,7 +154,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
           company: "Kode.Lab",
           role: "Fullstack Developer",
           period: "Feb 2026 — Present",
-          type: "Part-time",
           location: "Maceió, Brazil",
           description:
             "Software development on R&D projects addressing real demands from partner companies, in a multidisciplinary environment collaborating with technical leads.",
@@ -166,7 +163,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
           company: "SECTI Alagoas — OxeTech Program",
           role: "Backend Developer",
           period: "Nov 2025 — Present",
-          type: "Part-time",
           location: "Maceió, Brazil",
           description:
             "Development of the OxeTech platform, building and maintaining backend APIs and services focused on performance, security, and scalability, plus data modeling and database integration ensuring consistency and efficient data access.",
