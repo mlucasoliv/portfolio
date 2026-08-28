@@ -115,8 +115,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     contact: {
       title: "Contato",
-      intro:
-        "Aberto a encomendas de projetos, freelas e novas oportunidades. Vamos conversar.",
+      intro: "Aberto a encomendas de projetos e freelas.",
       items: contactItems,
       form: {
         name: { label: "Nome", placeholder: "Seu nome" },
@@ -181,8 +180,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     contact: {
       title: "Contact",
-      intro:
-        "Open to project commissions, freelance work and new opportunities. Let's talk.",
+      intro: "Open to project commissions and freelance work.",
       items: contactItems,
       form: {
         name: { label: "Name", placeholder: "Your name" },
