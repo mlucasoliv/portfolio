@@ -4,6 +4,8 @@ export const siteUrl = "https://marcelodev.tech";
 
 export const profile = {
   name: "Marcelo Lucas",
+  jobTitle: "Desenvolvedor Full-Stack",
+  location: { city: "Maceió", region: "AL", regionName: "Alagoas", country: "BR" },
   links: {
     email: "marcelolucasdeoliveiraa@gmail.com",
     linkedin: "https://www.linkedin.com/in/mlucasoliv/",
@@ -26,6 +28,7 @@ export type Dictionary = {
   nav: { sobre: string; experiencia: string; skills: string; contato: string };
   hero: {
     role: string;
+    location: string;
     tagline: string;
     ctaExperience: string;
     ctaContact: string;
@@ -67,6 +70,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     nav: { sobre: "Sobre", experiencia: "Experiência", skills: "Skills", contato: "Contato" },
     hero: {
       role: "Software Engineer",
+      location: "Maceió, AL",
       tagline:
         "Construo software que parece certo — do backend ao último detalhe da interface.",
       ctaExperience: "Ver experiência",
@@ -132,6 +136,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     nav: { sobre: "About", experiencia: "Experience", skills: "Skills", contato: "Contact" },
     hero: {
       role: "Software Engineer",
+      location: "Maceió, Brazil",
       tagline:
         "I build software that feels right — from the backend to the last detail of the interface.",
       ctaExperience: "View experience",

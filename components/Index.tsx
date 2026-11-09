@@ -24,7 +24,7 @@ export function Index() {
         {profile.name}
       </motion.h1>
       <motion.p variants={item} className="uppercase text-muted">
-        {t.hero.role}
+        {t.hero.role} · {t.hero.location}
       </motion.p>
 
       <motion.p variants={item} className="mt-7 uppercase leading-loose text-muted">
