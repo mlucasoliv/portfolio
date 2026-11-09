@@ -3,13 +3,14 @@ import { JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { SiteFooter } from "@/components/SiteFooter";
-import { dictionaries, profile, siteUrl } from "@/lib/data";
+import { profile, siteUrl } from "@/lib/data";
+import { baseOpenGraph, homeDescription, homeTitle, jsonLd } from "@/lib/seo";
 import "./globals.css";
 
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
-const title = `${profile.name} — ${dictionaries.pt.hero.role}`;
-const description = dictionaries.pt.hero.tagline;
+const title = homeTitle;
+const description = homeDescription;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -23,8 +24,11 @@ export const metadata: Metadata = {
   creator: profile.name,
   keywords: [
     profile.name,
+    "desenvolvedor Maceió",
+    "programador Maceió",
+    "desenvolvedor full-stack",
+    "desenvolvedor Alagoas",
     "Software Engineer",
-    "Fullstack Developer",
     "TypeScript",
     "React",
     "Next.js",
@@ -34,12 +38,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  // Código do Google Search Console (verificação por tag HTML). Fica vazio até
+  // a variável existir na Vercel; sem ela, nenhuma tag é gerada.
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
   openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    alternateLocale: ["en_US"],
+    ...baseOpenGraph,
     url: siteUrl,
-    siteName: profile.name,
     title,
     description,
   },
@@ -69,6 +75,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning className={mono.variable}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <ThemeProvider>
           <LanguageProvider>
             {/* m-auto (e não justify-center) centraliza sem cortar o topo
